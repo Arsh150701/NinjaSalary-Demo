@@ -6,7 +6,7 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const result = await axios.get(
-        'http://65.1.107.179:8000/get-dummy-dashboard-data/',
+        'https://api.ninjasalary.com/get-dummy-dashboard-data/',
       );
       setData(result.data.data);
     })();
@@ -22,7 +22,7 @@ export default function Home() {
           flex: 1,
           justifyContent: 'center',
           padding: 20,
-          backgroundColor: '#ADD8E699',
+          backgroundColor: '#ADD8E6CC',
         }}>
         <Text style={{fontSize: 22, fontWeight: 'bold'}}>
           Hello {data?.first_name},
@@ -67,6 +67,7 @@ export default function Home() {
           }}
           value={number}
           placeholder="Withdraw amount"
+          placeholderTextColor="#222831"
           keyboardType="numeric"
         />
         <View
